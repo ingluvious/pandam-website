@@ -1,0 +1,10 @@
+.under-construction{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.under-construction img{
+    max-width:50%;
+    max-height:50%;
+}
