@@ -1,6 +1,6 @@
 import React from "react"
 import './Home.css'
-import under_construction from '../images/under_construction.png';
+import under_construction from '../images/under_construction_2.png';
 
 const Home: React.FC = () => {
     return(

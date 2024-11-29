@@ -28,6 +28,21 @@
   color: #61dafb;
 }
 
+body {
+  background: linear-gradient(
+      to bottom right,
+      #fdd5b1, /* Soft cream for red panda belly */
+      #f4a261, /* Warm orange */
+      #e76f51  /* Light red for fur */
+  );
+  background-size: cover;
+  background-attachment: fixed; /* Ensures it stays in place while scrolling */
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 100vh; /* Full viewport height */
+  font-family: Arial, sans-serif; /* Optional font */
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

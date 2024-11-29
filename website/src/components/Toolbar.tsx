@@ -5,7 +5,6 @@ import './Toolbar.css';
 const Toolbar: React.FC = () => {
     return (
         <nav className="toolbar">
-            <div className="logo">MyApp</div>
             <ul className="toolbar-links">
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/Services">Services</Link></li>
