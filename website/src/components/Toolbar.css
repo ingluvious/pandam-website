@@ -1,16 +1,11 @@
 .toolbar {
     position: absolute; /* Allows precise placement */
-    top: 35%; /* 35% down the page */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for true centering */
+    top: 10%; /* 35% down the page */
+    width: 100vw;
     display: flex; /* Align toolbar options in a row */
     justify-content: center; /* Center the options horizontally */
     align-items: center; /* Align options vertically */
     gap: 20px; /* Optional: spacing between items */
-    background-color: rgba(255, 255, 255, 0.8); /* Optional: background for visibility */
-    padding: 10px 20px; /* Optional: spacing around options */
-    border-radius: 8px; /* Optional: rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: slight shadow */
 }
 
 .toolbar-links {
@@ -24,7 +19,7 @@
     text-decoration: none;
     color: black;
     font-size: 1rem;
-    transition: color 0.1s;
+    transition: color 0.3s;
 }
 
 .toolbar-links a:hover {

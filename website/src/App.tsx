@@ -1,6 +1,6 @@
 // Import code specific modules
 import React from 'react';
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Toolbar from './components/Toolbar';
 
 // Import the specific pages to be used within the app
@@ -23,12 +23,14 @@ const App: React.FC = () => {
         <div className = "App" style = {backgroundStyle}>
             <Toolbar />
             <Routes>
-              <Route path="/Home" element={<Home />} />
-              <Route path="/Services" element={<Services />} />
-              <Route path="/About" element={<About />} />
-              <Route path="/Contact" element={<Contact />} />
+            <Route path="/" element={<Navigate to="/Home" />} />
+            <Route path="/Home" element={<Home />} />
+            <Route path="/Services" element={<Services />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/Contact" element={<Contact />} />
             </Routes>
         </div>
+        
     );
 };
 
