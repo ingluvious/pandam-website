@@ -1,12 +1,15 @@
 import React from "react";
-
+import pandamLogo from "../resources/Pandam.png"
 const Home: React.FC = () => {
-  return (
+    return (
     <>
     <div style = {styles.container}>
-      <h1 style = {styles.header}> Pandam </h1>
+        <img src={pandamLogo} alt = "Pandam Logo" style = {styles.image_size}></img>
+        {/* <h1 style = {styles.header}> Pandam </h1> */}
     </div>
+    <div style = {{paddingTop: "75px"}}>
     <p style = {styles.paragraph}>Engage with Pandam so that you can unfold your true Potential.</p>
+    </div>
     </>
   );
 };
@@ -26,6 +29,14 @@ const styles: Record<string, React.CSSProperties> = {
     paragraph: {
         fontSize: "1rem",
         textAlign: "center"
+    },
+    image_size:{
+        display: "flex",
+        height: "20vh",
+        alignItems: "center",
+        justifyContent: "center",
+        textAlign: "center",
+        paddingTop: "75px"
     }
 };
 
