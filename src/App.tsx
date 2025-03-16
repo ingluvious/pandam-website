@@ -1,47 +1,30 @@
 import React from 'react';
 import {Routes, Route} from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Navbar from "./pages/Navbar"
+import NavBar from "./utilityFiles/NavBar"
+import Home from "./webPages/Home";
+import Services from "./webPages/Services";
+import About from "./webPages/About";
+import Contact from "./webPages/Contact";
 
-// import logo from './logo.svg';
+
+// Import the Style Sheet for App.tsx
 import './App.css';
 
 const App: React.FC = () => {
   return (
     <>
-      <Navbar />
-      <div style = {{ paddingTop:"60px"}} >
+    <div className = "App">
+      <NavBar />
+      <div>
       <Routes>
         <Route path = "/" element = {<Home />} />
         <Route path = "/about" element = {<About />} />
         <Route path = "/contact" element = {<Contact />} />
       </Routes>
       </div>
+      </div>
     </>
   );
 };
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.tsx</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 
 export default App;
