@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import pandamWhiteText from "../../images/pandam_logo_white_text_no_bg.png";
-import styles from "./style_Banner";
+import styles from "../../styleSheets/style_Banner";
 
 const sec_Banner: React.FC = () => {
   return (
@@ -29,7 +29,7 @@ const sec_Banner: React.FC = () => {
         <motion.h1
           variants={{
             hidden: { opacity: 0, y: 20 },
-            show: { opacity: 1, y: 0, transition: { duration: 1.5, ease: "easeOut", delay: 0.3 } },
+            show: { opacity: 1, y: 0, transition: { duration: 1.5, ease: "easeOut", delay: 1.5 } },
           }}
         >
           .Powering Success

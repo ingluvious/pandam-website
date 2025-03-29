@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./style_Services";
+import styles from "../../styleSheets/style_Services";
 import SalesforceImage from "../../images/Salesforce Logo.jpg"
 import IntegrationImage from "../../images/Integration Logo.png"
 

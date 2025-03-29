@@ -1,6 +1,6 @@
 // /Users/ingluvious/Development/Github-pd/pandam-website/src/utilityFiles/NavBar.tsx
 import { Link } from "react-router-dom";
-import styles from "./style_NavBar";
+import styles from "../styleSheets/style_NavBar";
 import pandamText from "../images/pandam_logo_white_text_no_bg.png";
 
 const Navbar: React.FC = () => {
