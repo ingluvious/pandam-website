@@ -19,7 +19,7 @@ const sec_Services: React.FC = () => {
           minWidth: "350px" 
         }}>
           <img src={IntegrationImage} alt="Integration Logo" style={{ height: "100px" }} />
-          <h3 className="inner-box-text" style={{ color: "black", padding: "0 20px", width: "100%" }}>Data and Integration</h3>
+          <h3 className="inner-box-text" style={{ color: "black", padding: "0 20px", width: "100%", textAlign: "center" }}>Data and Integration</h3>
           <p className="inner-box-text" style={{ color: "black", padding: "0 20px", width: "100%" }}>
             We help you connect your systems, integrate APIs, and move data smoothly between platforms like Salesforce and AWS.
           </p>
@@ -33,7 +33,7 @@ const sec_Services: React.FC = () => {
           minWidth: "350px" 
         }}>
           <img src={SalesforceImage} alt="Salesforce Logo" style={{ height: "100px" }} />
-          <h3 className="inner-box-text" style={{ color: "black", padding: "0 20px", width: "100%" }}>Salesforce</h3>
+          <h3 className="inner-box-text" style={{ color: "black", padding: "0 20px", width: "100%" , textAlign: "center"}}>Salesforce</h3>
           <p className="inner-box-text" style={{ color: "black", padding: "0 20px", width: "100%" }}>
             As Salesforce experts, we assist with implementation, automation, and customization tailored to your business.
           </p>
@@ -46,7 +46,7 @@ const sec_Services: React.FC = () => {
           maxWidth: "350px", 
           minWidth: "350px" 
         }}>
-          <h3 className="inner-box-text" style={{ color: "black", padding: "0 20px", width: "100%" }}>Workflow Solutions</h3>
+          <h3 className="inner-box-text" style={{ color: "black", padding: "0 20px", width: "100%", textAlign: "center" }}>Workflow Solutions</h3>
           <p className="inner-box-text" style={{ color: "black", padding: "0 20px", width: "100%" }}>
             We design streamlined workflows and user-friendly tools that empower teams to be productive and efficient.
           </p>
