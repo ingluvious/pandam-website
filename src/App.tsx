@@ -5,7 +5,7 @@ import Home from "./webPages/Home";
 import Services from "./webPages/Services";
 import About from "./webPages/About";
 import Contact from "./webPages/Contact";
-
+import Footer from "./utilityFiles/Footer"
 
 // Import the Style Sheet for App.tsx
 import './App.css';
@@ -13,16 +13,19 @@ import './App.css';
 const App: React.FC = () => {
   return (
     <>
-    <div className = "App">
+    <main>
+      <div className = "App">
       <NavBar />
-      <div>
-      <Routes>
-        <Route path = "/" element = {<Home />} />
-        <Route path = "/about" element = {<About />} />
-        <Route path = "/contact" element = {<Contact />} />
-      </Routes>
+        <div className = "container">
+        <Routes>
+          <Route path = "/" element = {<Home />} />
+          {/* <Route path = "/about" element = {<About />} /> */}
+          <Route path = "/contact" element = {<Contact />} />
+        </Routes>
+        <Footer />
+        </div>
       </div>
-      </div>
+    </main>
     </>
   );
 };

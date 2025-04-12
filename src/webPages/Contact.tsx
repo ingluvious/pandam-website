@@ -68,129 +68,121 @@ const Contact: React.FC = () => {
             Form Submitted! Redirecting you to the home page<span>.</span><span>.</span><span>.</span>
           </div>
         ) : (
-          <form onSubmit={handleSubmit}>
-            <div style={{ display: "none" }}>
-              <label>
-                Do not fill this out:
-                <input
-                  name="botField"
-                  value={formData.botField}
-                  onChange={handleChange}
-                  type="text"
-                />
-              </label>
-            </div>
-            <div className="form-group">
-              <label>
-                Name:
+          <>
+            <form onSubmit={handleSubmit}>
+              <div style={{ display: "none" }}>
+                <label>
+                  Do not fill this out:
+                  <input
+                    name="botField"
+                    value={formData.botField}
+                    onChange={handleChange}
+                    type="text"
+                  />
+                </label>
+              </div>
+              <div className="form-group">
                 <input
                   type="text"
                   name="name"
+                  placeholder="Name"
                   value={formData.name}
                   onChange={handleChange}
                   required
                 />
-              </label>
-            </div>
-            <div className="form-group">
-              <label>
-                Email:
+              </div>
+              <div className="form-group">
                 <input
                   type="email"
                   name="email"
+                  placeholder="Email"
                   value={formData.email}
                   onChange={handleChange}
                   required
                 />
-              </label>
+              </div>
+              <div className="form-group">
+              {/* <label>
+                  Message: */}
+                  <textarea
+                    name="message"
+                    placeholder="What's your message?"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                  />
+                {/* </label> */}
+              </div>
+              <div className="form-button">
+                <button type="submit">Get in touch</button>
+              </div>
+            </form>
+            <div className="right-side">
+              <h1 style={{ fontSize: "3rem", lineHeight: "1.2" }}>
+                Contact Us
+              </h1>
+              <p style={{ marginTop: "1rem", maxWidth: "80%", fontSize: "0.9rem" }}>
+                It is very important for us to keep in touch with you, so we are always ready to answer any question that interests you. Shoot!
+              </p>
             </div>
-            <div className="form-group">
-              <label>
-                Message:
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                />
-              </label>
-            </div>
-            <div className="form-button">
-              <button type="submit">Send</button>
-            </div>
-          </form>
+          </>
         )}
       </div>
       <style>{`
         .contact-form-container {
-          max-width: 600px;
+          max-width: 1000px;
           margin: 2rem auto;
-          padding: 2rem;
+          padding: 5rem 2rem 2rem; /* Updated padding-top */
           background-color: transparent;
-          border-radius: 8px;
-          box-shadow: 0 0 10px rgba(0,0,0,0.1);
-          box-sizing: border-box;
-        }
-        .form-group {
-          margin-bottom: 1rem;
-        }
-        label {
-          display: block;
-          margin-bottom: 0.75rem;
-          font-weight: 500;
-          color: white;
-        }
-        input {
-          width: 100%;
-          padding: 0.75rem 0;
-          border: none;
-          border-bottom: 2px solid #ccc;
+          display: flex;
+          justify-content: space-between;
           border-radius: 0;
-          font-size: 1rem;
-          box-sizing: border-box;
-          background: transparent;
-          outline: none;
           color: white;
+          font-family: 'Helvetica Neue', sans-serif;
+}
         }
-        input:focus {
-          border-bottom-color: #0070f3;
+        form {
+          width: 50%;
+          padding-right: 2rem;
         }
-        textarea {
-          height: 100px;
-          resize: vertical;
+        .right-side {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-left: 2rem;
+        }
+        input, textarea {
           width: 100%;
-          padding: 0.75rem 0;
-          border: none;
-          border-bottom: 2px solid #ccc;
-          border-radius: 0;
-          font-size: 1rem;
-          box-sizing: border-box;
+          padding: 0.5rem 0;
+          margin-bottom: 1.5rem;
           background: transparent;
-          outline: none;
+          border: none;
+          border-bottom: 1px solid white;
           color: white;
+          font-size: 1rem;
         }
-        textarea:focus {
-          border-bottom-color: #0070f3;
+        input:focus, textarea:focus {
+          outline: none;
+          border-bottom: 1px solid maroon;
         }
         button[type="submit"] {
-          padding: 0.75rem 1.5rem;
-          background-color: #0070f3;
+          padding: 1rem 2rem;
+          background-color: maroon;
           color: white;
+          font-weight: bold;
           border: none;
-          border-radius: 4px;
-          font-size: 1rem;
+          border-radius: 50px;
+          font-size: 0.9rem;
+          letter-spacing: 1px;
           cursor: pointer;
+          transition: opacity 0.3s ease;
         }
         button[type="submit"]:hover {
-          background-color: #005ac1;
+          opacity: 0.8;
         }
         .contact-heading {
-          text-align: center;
-          margin-bottom: 1rem;
-        }
-        .form-button {
-          text-align: center;
-          margin-top: 1rem;
+          display: none;
         }
         .redirect-message {
           text-align: center;
@@ -198,28 +190,8 @@ const Contact: React.FC = () => {
           color: white;
           margin-top: 2rem;
         }
-
-        .redirect-message span {
-          opacity: 0;
-          animation: fadeIn 0.5s forwards;
-        }
-
-        .redirect-message span:nth-child(1) {
-          animation-delay: 0.5s;
-        }
-
-        .redirect-message span:nth-child(2) {
-          animation-delay: 1.5s;
-        }
-
-        .redirect-message span:nth-child(3) {
-          animation-delay: 2.5s;
-        }
-
-        @keyframes fadeIn {
-          to {
-            opacity: 1;
-          }
+        .form-button {
+          text-align: center;
         }
       `}</style>
     </div>

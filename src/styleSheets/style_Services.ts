@@ -1,37 +1,58 @@
 const styles: Record<string, React.CSSProperties> = {
-  section_gap: {
-    paddingTop:"25px",
+  servicesContainer: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    flexWrap: "wrap",
+    gap: "0px",
+    backgroundColor: "transparent"
   },
-  heading: {
+  sectionHeading: {
     textAlign: "center",
+    paddingTop: "25px",
     paddingBottom: "20px"
   },
-  roundedRectangle: {
-    width: "95%", // Adjust as needed
-    height: "650px", // Adjust as needed
-    backgroundColor: "#5C0203", // Light background
-    borderRadius: "20px", // Rounded edges
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    boxShadow: "2px 2px 10px rgba(0, 0, 0, 0.1)", // Optional shadow
-    margin: "20px auto", // Centers the rectangle horizontally
-    padding: "20px auto",
-  },
   innerBox: {
-    width: "25%", // Each box takes 30% of the big box width
-    height: "450px", // Adjust as needed
-    backgroundColor: "#fff", // White box inside
-    borderRadius: "10px", // Rounded edges
+    // Each box takes 30% of the big box width
+    width: "28%", 
+    height: "450px", 
+    backgroundColor: "#fff",
+    borderRadius: "20px",
     display: "flex",
-    justifyContent: "flex-start",
     flexDirection: "column",
     alignItems: "center",
-    boxShadow: "1px 1px 5px rgba(0, 0, 0, 0.2)", // Subtle shadow
-    margin: "60px"
+    margin: "25px",
+    minWidth: "350px",
+    maxWidth: "350px",
+    flexShrink: 0, 
+    flexGrow: 0
+  },
+  innerBox_Heading: {
+    alignItems: "center",
+    color: "black",
   },
   innerBox_Text: {
-    color:"black"
+    textAlign: "left",
+    color: "black"
+  },
+  innberBox_Text_Alignment: {
+    margin: "20px"
+  },
+  image_Sizes: {
+    height: "75px"
+  },
+  button_Alignment: {
+    textAlign: "center",
+    marginTop: "20px"
+  },
+  button_Customise:{
+    padding: "10px 20px", 
+    fontSize: "16px", 
+    borderRadius: "5px", 
+    backgroundColor: "#5C0203", 
+    color: "#fff", 
+    border: "none", 
+    cursor: "pointer" 
   }
 };
 
