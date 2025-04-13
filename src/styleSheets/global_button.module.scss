@@ -1,0 +1,20 @@
+.form_button {
+    text-align: center;
+
+    button[type="submit"] {
+      padding: 1rem 2rem;
+      background-color: maroon;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }

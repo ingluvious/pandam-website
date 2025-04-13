@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import contact_style from "../styleSheets/style_contact.module.scss";
+import button_style from "../styleSheets/global_button.module.scss"
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -61,15 +63,15 @@ const Contact: React.FC = () => {
 
   return (
     <div>
-      <h1 className="contact-heading">Contact Us</h1>
-      <div className="contact-form-container">
+      <h1 className={contact_style.contact_heading}>Contact Us</h1>
+      <div className={contact_style.contact_form_container}>
         {submitted ? (
-          <div className="redirect-message">
+          <div className={contact_style.redirect_message}>
             Form Submitted! Redirecting you to the home page<span>.</span><span>.</span><span>.</span>
           </div>
         ) : (
           <>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className={contact_style.form}>
               <div style={{ display: "none" }}>
                 <label>
                   Do not fill this out:
@@ -78,10 +80,11 @@ const Contact: React.FC = () => {
                     value={formData.botField}
                     onChange={handleChange}
                     type="text"
+                    className="input_focus_textarea_focus"
                   />
                 </label>
               </div>
-              <div className="form-group">
+              <div>
                 <input
                   type="text"
                   name="name"
@@ -91,7 +94,7 @@ const Contact: React.FC = () => {
                   required
                 />
               </div>
-              <div className="form-group">
+              <div>
                 <input
                   type="email"
                   name="email"
@@ -101,23 +104,26 @@ const Contact: React.FC = () => {
                   required
                 />
               </div>
-              <div className="form-group">
-              {/* <label>
-                  Message: */}
-                  <textarea
-                    name="message"
-                    placeholder="What's your message?"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                  />
-                {/* </label> */}
+              <div>
+                <textarea
+                  name="message"
+                  placeholder="What's your message?"
+                  value={formData.message}
+                  onChange={handleChange}
+                  onInput={(e) => {
+                    const target = e.target as HTMLTextAreaElement;
+                    target.style.height = "auto";
+                    target.style.height = `${target.scrollHeight}px`;
+                  }}
+                  rows={5}
+                  required
+                />
               </div>
-              <div className="form-button">
+              <div className={button_style.form_button}>
                 <button type="submit">Get in touch</button>
               </div>
             </form>
-            <div className="right-side">
+            <div className={contact_style.right_side}>
               <h1 style={{ fontSize: "3rem", lineHeight: "1.2" }}>
                 Contact Us
               </h1>
@@ -128,72 +134,6 @@ const Contact: React.FC = () => {
           </>
         )}
       </div>
-      <style>{`
-        .contact-form-container {
-          max-width: 1000px;
-          margin: 2rem auto;
-          padding: 5rem 2rem 2rem; /* Updated padding-top */
-          background-color: transparent;
-          display: flex;
-          justify-content: space-between;
-          border-radius: 0;
-          color: white;
-          font-family: 'Helvetica Neue', sans-serif;
-}
-        }
-        form {
-          width: 50%;
-          padding-right: 2rem;
-        }
-        .right-side {
-          width: 50%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          padding-left: 2rem;
-        }
-        input, textarea {
-          width: 100%;
-          padding: 0.5rem 0;
-          margin-bottom: 1.5rem;
-          background: transparent;
-          border: none;
-          border-bottom: 1px solid white;
-          color: white;
-          font-size: 1rem;
-        }
-        input:focus, textarea:focus {
-          outline: none;
-          border-bottom: 1px solid maroon;
-        }
-        button[type="submit"] {
-          padding: 1rem 2rem;
-          background-color: maroon;
-          color: white;
-          font-weight: bold;
-          border: none;
-          border-radius: 50px;
-          font-size: 0.9rem;
-          letter-spacing: 1px;
-          cursor: pointer;
-          transition: opacity 0.3s ease;
-        }
-        button[type="submit"]:hover {
-          opacity: 0.8;
-        }
-        .contact-heading {
-          display: none;
-        }
-        .redirect-message {
-          text-align: center;
-          font-size: 1.2rem;
-          color: white;
-          margin-top: 2rem;
-        }
-        .form-button {
-          text-align: center;
-        }
-      `}</style>
     </div>
   );
 };

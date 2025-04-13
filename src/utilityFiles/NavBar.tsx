@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import styles from "../styleSheets/style_NavBar";
+import navbar_styles from "../styleSheets/style_navbar.module.scss";
 import pandamText from "../images/pandam_logo_white_text_no_bg.png";
 
 const Navbar: React.FC = () => {
@@ -21,33 +21,33 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav style={styles.nav}>
+    <nav className={navbar_styles.nav}>
       <div style={{display:"flex", alignItems:"center"}}>
       <Link to="/">
-        <img src={pandamText} alt="Pandam Logo White Text Only" style={styles.pandamNavLogo}></img>
+        <img src={pandamText} alt="Pandam Logo White Text Only" className={navbar_styles.pandamNavLogo}></img>
       </Link>
       {isMobile && (
         <div>
-          <button onClick={() => setMenuOpen(!menuOpen)} style={{...styles.hamburger, marginLeft: "auto"}}>
+          <button onClick={() => setMenuOpen(!menuOpen)} className={`${navbar_styles.hamburger}, marginLeft: "auto"`}>
             ☰
           </button>
           {menuOpen && (
-            <div style={{...styles.dropdown, display: "flex", right: "10px", left: "auto", transform: "none"}}>
-              <Link to="/" style={styles.link}>Home</Link>
+            <div className={`${navbar_styles.dropdown}, display: "flex", right: "10px", left: "auto", transform: "none"}`}>
+              <Link to="/" className={navbar_styles.link}>Home</Link>
               {/* <Link to="/services" style={styles.link}>Services</Link> */}
               {/* <Link to="/about" style={styles.link}>About</Link> */}
-              <Link to="/contact" style={styles.link}>Contact</Link>
+              <Link to="/contact" className={navbar_styles.link}>Contact</Link>
             </div>
           )}
         </div>
       )}
       </div>
       {!isMobile && (
-        <div style={styles.linkContainer}>
-          <Link to="/" style={styles.link}>Home</Link>
+        <div className={navbar_styles.linkContainer}>
+          <Link to="/" className={navbar_styles.link}>Home</Link>
           {/* <Link to="/services" style={styles.link}>Services</Link> */}
           {/* <Link to="/about" style={styles.link}>About</Link> */}
-          <Link to="/contact" style={styles.link}>Contact</Link>
+          <Link to="/contact" className={navbar_styles.link}>Contact</Link>
         </div>
       )}
     </nav>

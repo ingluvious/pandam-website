@@ -1,0 +1,27 @@
+.banner_section_format {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 50px;
+    overflow: hidden;
+  }
+  
+  .banner_heading {
+    padding-top: 100px;
+    width: 90dvw;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .banner_pandamLogo {
+    width: 200px;
+  }
+  
+  .motion_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }

@@ -1,6 +1,5 @@
 import React from "react";
-// import styles from "../sections/homepage/stylesheets/style_Services";
-import styles from "../stylesheets/style_Services"
+import service_style from "../../../../styleSheets/style_serviceCard.module.scss";
 
 interface ServiceCardProps {
   imageSrc: string;
@@ -16,19 +15,19 @@ interface ServiceCardProps {
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ imageSrc, altText, title, description }) => {
   return (
-    <div style={{ ...styles.innerBox }}>
-      <div style={{ 
-        ...styles.imageAndHeadingContainer
-      }}>
-        <div style={{ ...styles.imageCircleBackground }}>
-          <img src={imageSrc} alt={altText} style={{...styles.image_Sizes }} />
+    <div className={service_style.innerBox }>
+      <div className={
+        service_style.imageAndHeadingContainer
+      }>
+        <div className={ service_style.imageCircleBackground }>
+          <img src={imageSrc} alt={altText} className={service_style.image_Sizes } />
         </div>
-        <div style={{ ...styles.innerBox_Heading }}>
+        <div className={service_style.innerBox_Heading }>
           <h4>{title}</h4>
         </div>
       </div>
-      <div style={{...styles.innerBox_Text }}>
-        <p style={{ ...styles.innberBox_Text_Alignment }}>{description}</p>
+      <div className={service_style.innerBox_Text }>
+        <p className={service_style.innberBox_Text_Alignment }>{description}</p>
       </div>
     </div>
   );

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import RansenganGif from "../../../images/Rasengan.gif"
-import styles from "./stylesheets/style_Banner"
+import banner_styles from "../../../styleSheets/style_banner.module.scss"
 
-const Sec_Banner: React.FC = () => {
+const Section_Banner: React.FC = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ const Sec_Banner: React.FC = () => {
   }, []);
 
   return (
-    <div style={styles.banner_section_format}>
+    <div className={banner_styles.banner_section_format}>
       <motion.div
         initial="hidden"
         animate="show"
@@ -21,11 +21,10 @@ const Sec_Banner: React.FC = () => {
           hidden: { opacity: 0 },
           show: {opacity: 1, transition: { staggerChildren: 1 },},
         }}
+        className={`${banner_styles.banner_heading} ${banner_styles.motion_div}`}
         style={{
-          ...styles.banner_heading,
-          ...styles.motion_div,
           flexDirection: isMobile ? "column" : "row",
-          gap: isMobile ? "0rem" : styles.motion_div.gap
+          gap: isMobile ? "0rem" : "2rem"
         }}
       >
         <motion.h1
@@ -39,7 +38,7 @@ const Sec_Banner: React.FC = () => {
         <img
         src={RansenganGif}
         alt="Spiral Sphere"
-        style={styles.banner_pandamLogo}
+        className={banner_styles.banner_pandamLogo}
       />
         <motion.h1
           variants={{
@@ -55,4 +54,4 @@ const Sec_Banner: React.FC = () => {
   );
 };
 
-export default Sec_Banner;
+export default Section_Banner;
