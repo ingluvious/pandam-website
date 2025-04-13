@@ -1,11 +1,11 @@
 import React from 'react';
 import {Routes, Route} from "react-router-dom";
-import NavBar from "./utilityFiles/NavBar"
-import Home from "./webPages/Home";
-import Services from "./webPages/Services";
-import About from "./webPages/About";
-import Contact from "./webPages/Contact";
-import Footer from "./utilityFiles/Footer";
+import NavBar from "./page_sections/navigation/NavBar"
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Footer from "./page_sections/utilityFiles/Footer";
 
 // Import the Style Sheet for App.tsx
 import styles from "./styleSheets/app.module.scss";

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import contact_style from "../styleSheets/style_contact.module.scss";
 import button_style from "../styleSheets/global_button.module.scss"
+import GlobalButton from "../page_sections/utilityFiles/GlobalButton"
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -119,9 +120,7 @@ const Contact: React.FC = () => {
                   required
                 />
               </div>
-              <div className={button_style.form_button}>
-                <button type="submit">Get in touch</button>
-              </div>
+              <GlobalButton text = "Get in touch" />
             </form>
             <div className={contact_style.right_side}>
               <h1 style={{ fontSize: "3rem", lineHeight: "1.2" }}>

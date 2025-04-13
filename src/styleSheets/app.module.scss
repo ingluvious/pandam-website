@@ -4,8 +4,8 @@
   }
   
   .App {
-    background: linear-gradient(to bottom, #020002 65%, #471111);
-    /* background: linear-gradient(to bottom, #171414 65%, #471111); */
+    // background: linear-gradient(to bottom, #020002 65%, #471111);
+    background: linear-gradient(to bottom, #171414 65%, #471111);
     height: 100%;
     min-height: 100dvh;
     width: 100%;
@@ -20,7 +20,6 @@
     overscroll-behavior: contain;
   }
   
-  
   html, body {
     width: 100%;
     max-width: 100dvw;
@@ -33,7 +32,7 @@
     padding: 0 1rem; /* optional, to avoid hugging the edges */
     box-sizing: border-box;
     overflow-x: hidden;
-    outline: 1px solid red;
+    // outline: 1px solid red;
   }
 
   .form_button {

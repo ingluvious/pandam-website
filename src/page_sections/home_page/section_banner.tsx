@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import RansenganGif from "../../../images/Rasengan.gif"
-import banner_styles from "../../../styleSheets/style_banner.module.scss"
+import RansenganGif from "../../images/Rasengan.gif"
+import banner_styles from "../../styleSheets/style_banner.module.scss"
 
 const Section_Banner: React.FC = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);

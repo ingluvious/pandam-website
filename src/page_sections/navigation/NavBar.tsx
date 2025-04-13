@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import navbar_styles from "../styleSheets/style_navbar.module.scss";
-import pandamText from "../images/pandam_logo_white_text_no_bg.png";
+import navbar_styles from "../../styleSheets/style_navbar.module.scss";
+import pandamText from "../../images/pandam_logo_white_text_no_bg.png";
 
 const Navbar: React.FC = () => {
   const [isMobile, setIsMobile] = useState<boolean>(false);

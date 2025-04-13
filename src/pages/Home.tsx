@@ -1,7 +1,7 @@
 import React from "react";
-import Banner from "./sections/homepage/sec_Banner"
-import Services from "./sections/homepage/sec_Services"
-import HorizontalDivider from "../utilityFiles/HorizontalDivider";
+import Banner from "../page_sections/home_page/section_banner"
+import Services from "../page_sections/home_page/section_services"
+import HorizontalDivider from "../page_sections/utilityFiles/HorizontalDivider";
 
 const Home: React.FC = () => {
   return (

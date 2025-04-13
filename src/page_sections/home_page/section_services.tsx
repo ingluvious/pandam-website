@@ -1,21 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import service_styles from "../../../styleSheets/style_service.module.scss";
-import ServiceCard from "./serviceCards/serviceCards"
-import IntegrationImage from "../../../images/Integration Logo.png"
-import CloudPlatfrom from "../../../images/Cloud Platform.png"
-import DatabaseImage from "../../../images/Database Image.avif"
+import service_style from "../../styleSheets/style_service.module.scss"
+import ServiceCard from "../serviceCards/service_cards";
+import Button from "../utilityFiles/GlobalButton";
+
+import IntegrationImage from "../../images/Integration Logo.png"
+import CloudPlatfrom from "../../images/Cloud Platform.png"
+import DatabaseImage from "../../images/Database Image.avif"
 
 const Sec_Services: React.FC = () => {
-  const [isHovered, setIsHovered] = useState(false)
   return (
     <>
     {/* Title of the page */}
       <div>
-        <h1 className={service_styles.sectionHeading}>Our Services</h1>
+        <h1 className={service_style.sectionHeading}>Our Services</h1>
       </div>
 
-      <div className={service_styles.servicesContainer}>
+      <div className={service_style.servicesContainer}>
         {/* First Service Card */}
         <ServiceCard
           imageSrc={IntegrationImage}
@@ -48,15 +49,9 @@ const Sec_Services: React.FC = () => {
           />
 
       </div>
-      <div className={service_styles.button_Alignment}>
+      <div className={service_style.button_Alignment}>
         <Link to="/services">
-        <button
-          className={`${service_styles.submitButton} ${isHovered ? service_styles.submitButton_Hover : ""}`}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          >
-            View All Services
-          </button>
+        <Button text="View All Services" />
         </Link>
       </div>
     </>
