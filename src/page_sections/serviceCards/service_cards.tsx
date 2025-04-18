@@ -12,10 +12,8 @@ interface ServiceCardProps {
 const ServiceCard: React.FC<ServiceCardProps> = ({ imageSrc, altText, title, description }) => {
   return (
     <div className={Sstyle.innerBox}>
-      <div className={
-        Sstyle.imageAndHeadingContainer
-      }>
-        <div className={ Sstyle.imageCircleBackground}>
+      <div className={Sstyle.serviceBoxAlignment}>
+        <div className={ Sstyle.imageCircleBackground} style = {{paddingTop: "20px"}}>
           <img src={imageSrc} alt={altText} className={Sstyle.image_Sizes}/>
         </div>
         <div className={Sstyle.innerBox_Heading }>

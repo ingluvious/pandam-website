@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import RansenganGif from "../../images/Rasengan.gif"
+// import RansenganGif from "../../images/Rasengan-v3_no_bg.gif"
+// import RansenganGif from "../../images/Rasengan_SOLO.gif"
 import banner_styles from "../../styleSheets/style_banner.module.scss"
 
 const Section_Banner: React.FC = () => {
@@ -43,7 +45,7 @@ const Section_Banner: React.FC = () => {
         <motion.h1
           variants={{
             hidden: { opacity: 0, y: 20 },
-            show: { opacity: 1, y: 0, transition: { duration: 1.5, ease: "easeOut", delay: 1.5 } },
+            show: { opacity: 1, y: 0, transition: { duration: 1.5, ease: "easeOut", delay: 0.75 } },
           }}
         >
           Powering Success.

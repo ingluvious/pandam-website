@@ -4,9 +4,10 @@ import service_style from "../../styleSheets/style_service.module.scss"
 import ServiceCard from "../serviceCards/service_cards";
 import Button from "../utilityFiles/GlobalButton";
 
-import IntegrationImage from "../../images/Integration Logo.png"
-import CloudPlatfrom from "../../images/Cloud Platform.png"
-import DatabaseImage from "../../images/Database Image.avif"
+import IntegrationImage from "../../images/web_int_web_02.png"
+import CloudPlatfrom from "../../images/web_cloud_01.png"
+import DatabaseImage from "../../images/Web_data_05.png"
+
 
 const Sec_Services: React.FC = () => {
   return (
@@ -32,8 +33,8 @@ const Sec_Services: React.FC = () => {
         <ServiceCard
           imageSrc={CloudPlatfrom}
           altText="Cloud Platform Logo"
-          title="Salesforce"
-          description="Pandam specializes in the Salesforce platform—offering expert implementation, 
+          title="Cloud Platforms"
+          description="Pandam specializes in the Salesforce cloud platform, offering expert implementation, 
                     ongoing support, security reviews, and tailored training. We help you align 
                     Salesforce with your business goals, ensuring optimized performance and a strong return on investment"
           />

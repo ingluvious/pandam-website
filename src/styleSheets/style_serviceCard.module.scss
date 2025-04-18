@@ -1,14 +1,19 @@
 .servicesContainer {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   gap: 0px;
   background-color: transparent;
 }
 
-.sectionHeading {
+.serviceBoxAlignment {
   text-align: center;
+  align-items: center;
+}
+
+.sectionHeading {
+  text-align: flex;
   padding-top: 25px;
   padding-bottom: 20px;
 }
@@ -16,7 +21,8 @@
 .innerBox {
   width: 28%;
   height: 450px;
-  background-color: #fff;
+  // background-color: #fff;
+  background-color: #e8e8e8;
   border-radius: 20px;
   display: flex;
   flex-direction: column;

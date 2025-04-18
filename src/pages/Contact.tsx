@@ -64,7 +64,7 @@ const Contact: React.FC = () => {
 
   return (
     <div>
-      <h1 className={contact_style.contact_heading}>Contact Us</h1>
+      {/* <h1 className={contact_style.contact_heading}>Contact Us</h1>÷ */}
       <div className={contact_style.contact_form_container}>
         {submitted ? (
           <div className={contact_style.redirect_message}>
@@ -72,6 +72,14 @@ const Contact: React.FC = () => {
           </div>
         ) : (
           <>
+          <div className={contact_style.left_side}>
+              <h1 style={{ fontSize: "3rem", lineHeight: "1.2" }}>
+                Contact Us
+              </h1>
+              <p style={{ marginTop: "1rem", maxWidth: "80%", fontSize: "0.9rem" }}>
+                It is very important for us to keep in touch with you, so we are always ready to answer any question that interests you. Shoot.!
+              </p>
+            </div>
             <form onSubmit={handleSubmit} className={contact_style.form}>
               <div style={{ display: "none" }}>
                 <label>
@@ -122,14 +130,6 @@ const Contact: React.FC = () => {
               </div>
               <GlobalButton text = "Get in touch" />
             </form>
-            <div className={contact_style.right_side}>
-              <h1 style={{ fontSize: "3rem", lineHeight: "1.2" }}>
-                Contact Us
-              </h1>
-              <p style={{ marginTop: "1rem", maxWidth: "80%", fontSize: "0.9rem" }}>
-                It is very important for us to keep in touch with you, so we are always ready to answer any question that interests you. Shoot!
-              </p>
-            </div>
           </>
         )}
       </div>
