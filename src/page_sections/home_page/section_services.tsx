@@ -8,7 +8,6 @@ import IntegrationImage from "../../images/web_int_web_02.png"
 import CloudPlatfrom from "../../images/web_cloud_01.png"
 import DatabaseImage from "../../images/Web_data_05.png"
 
-
 const Sec_Services: React.FC = () => {
   return (
     <>

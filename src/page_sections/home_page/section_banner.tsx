@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import RansenganGif from "../../images/Rasengan.gif"
-// import RansenganGif from "../../images/Rasengan-v3_no_bg.gif"
-// import RansenganGif from "../../images/Rasengan_SOLO.gif"
 import banner_styles from "../../styleSheets/style_banner.module.scss"
+import Button from "../utilityFiles/GlobalButton";
 
 const Section_Banner: React.FC = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -30,6 +30,7 @@ const Section_Banner: React.FC = () => {
         }}
       >
         <motion.h1
+          className={banner_styles.motion_heading}
           variants={{
             hidden: { opacity: 0, y: 20 },
             show: { opacity: 1, y: 0, transition: { duration: 1.5, ease: "easeOut" } },
@@ -43,15 +44,20 @@ const Section_Banner: React.FC = () => {
         className={banner_styles.banner_pandamLogo}
       />
         <motion.h1
+          className={banner_styles.motion_heading}
           variants={{
             hidden: { opacity: 0, y: 20 },
             show: { opacity: 1, y: 0, transition: { duration: 1.5, ease: "easeOut", delay: 0.75 } },
           }}
         >
-          Powering Success.
+          Powering Success. 
         </motion.h1>
       </motion.div>
-      
+      <div style={{paddingTop: "30px"}}>
+        <Link to="/contact">
+          <Button text="Get in Touch" />
+      </Link>
+      </div>
     </div>
   );
 };
